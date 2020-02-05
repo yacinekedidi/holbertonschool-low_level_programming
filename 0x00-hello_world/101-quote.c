@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<errno.h>
 /**
  * main - Short description, single line
  * @void: Description of parameter x
@@ -9,6 +10,6 @@
 */
 int main(void)
 {
-perror("and that piece of art is useful\" - Dora Korpar\,\n");
+perror("and that piece of art is useful\" - Dora Korpar,\n");
 return (1);
 }
