@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<errno.h>
 /**
  * main - Short description, single line
  * @void: Description of parameter x
