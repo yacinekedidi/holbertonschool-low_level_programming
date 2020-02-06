@@ -12,11 +12,11 @@ int main(void)
 int i, j, x = 4;
 for (i = 48 ; i <= 57 ; i++)
 {
-for (j = 44 + x ; j <= 57 ; j++)
+for (j = 45 + x ; j <= 57 ; j++)
 {
 putchar(i);
 putchar(j);
-if (i + j != 114)
+if (i + j != 113)
 {
 putchar(',');
 putchar(' ');
