@@ -9,16 +9,21 @@
 */
 int main(void)
 {
-int i;
+int i,j,x;
 for (i = 48 ; i < 58 ; i++)
 {
 putchar(i);
-if (i != 57)
+x=44;
+for ( j =0 ; j<=1 ; j++)
 {
-putchar(44);
-putchar(' ');
+if( i != 57)
+{
+putchar(x);
+x-=12;
+}
 }
 }
 putchar('$');
+putchar('\n');
 return (0);
 }
