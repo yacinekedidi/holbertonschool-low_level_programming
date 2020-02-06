@@ -9,17 +9,17 @@
 */
 int main(void)
 {
-int i,j,x;
+int i, j, x;
 for (i = 48 ; i < 58 ; i++)
 {
 putchar(i);
-x=44;
-for ( j =0 ; j<=1 ; j++)
+x = 44;
+for (j = 0 ; j <= 1 ; j++)
 {
-if( i != 57)
+if (i != 57)
 {
 putchar(x);
-x-=12;
+x -= 12;
 }
 }
 }
