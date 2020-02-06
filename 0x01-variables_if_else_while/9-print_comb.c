@@ -23,7 +23,7 @@ x -= 12;
 }
 }
 }
-putchar('$');
+putchar(36);
 putchar('\n');
 return (0);
 }
