@@ -1,15 +1,13 @@
 #include "holberton.h"
 /**
- * add - Short description, single line
- * @a: Description of parameter x
-(* @b: descripttion
-* Description: Longer description of the function)?
-(* section header: Section description)*
-* Return: Description of the returned value
-*/
+ *add - Adds two integers
+ *@a: number 1 to be added
+ *@b: number 2 to be added
+ *
+ *Description: Adds a and b and returns the sum
+ *Return: returns the sum of a and b
+ */
 int add(int a, int b)
 {
-int x;
-x = a + b;
-return (x);
+return (a + b);
 }
