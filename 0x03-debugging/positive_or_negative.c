@@ -10,7 +10,7 @@
 (* section header: Section description)*
 * Return: 0
 */
-int positive_or_negative(int n)
+void positive_or_negative(int n)
 {
  
   /* srand(time(0));
@@ -21,5 +21,5 @@ int positive_or_negative(int n)
     printf("%d is zero\n", n);
   else
     printf("%d is negative\n", n);
-  return (0);
+ 
  }
