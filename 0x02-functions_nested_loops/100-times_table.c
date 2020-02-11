@@ -38,7 +38,7 @@ if (j != n)
 _putchar(',');
 _putchar(' ');
 }
- if(i * (j + 1) < 100
+ if(i * (j + 1) < 100)
    {
      if(j != n)
        _putchar(' ');
