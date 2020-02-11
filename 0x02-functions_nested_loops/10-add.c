@@ -5,7 +5,6 @@
  * @b: vfvnv
 (*
 * Description: Longer description of the function)?
-(* section header: Section description)*
 * Return: Description of the returned value
 */
 int add(int a, int b)
