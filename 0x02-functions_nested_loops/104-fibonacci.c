@@ -9,14 +9,14 @@
 */
 int main(void)
 {
-unsigned long fibo, f1 = 1, f2 = 2;
+double fibo, f1 = 1, f2 = 2;
 int i;
-printf("%lu, ", f1);
-printf("%lu, ", f2);
+printf("%.0f, ", f1);
+printf("%.0f, ", f2);
 for (i = 3 ; i <= 98 ; ++i)
 {
 fibo = f2 + f1;
-printf("%lu", fibo);
+printf("%.0f", fibo);
 if (i != 98)
 printf(", ");
 f1 = f2;
