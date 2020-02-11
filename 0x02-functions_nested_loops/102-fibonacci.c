@@ -9,14 +9,21 @@
 */
 int main(void)
 {
-long int numbers[50];
+unsigned long fibo, f1 = 1, f2 = 2;
 int i;
-numbers[0] = 0;
-numbers[1] = 1;
-for (i = 2 ; i < 50 ; ++i)
-numbers[i] = numbers[i - 2] + numbers[i - 1];
-for (i = 2 ; i < 49 ; ++i)
-printf("%li, ", numbers[i]);
-printf("%li\n", numbers[49]);
+
+printf("%lu, ", f1);
+printf("%lu, ", f2);
+
+for (i = 3 ; i <= 50 ; ++i)
+{
+fibo = f2 + f1;
+printf("%lu", fibo);
+if (i != 50)
+printf(", ");
+f1 = f2;
+f2 = fibo;
+}
+printf("\n");
 return (0);
 }
