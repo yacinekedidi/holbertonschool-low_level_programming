@@ -15,7 +15,7 @@ numbers[0] = 0;
 numbers[1] = 1;
 for (i = 2 ; i < 50 ; ++i)
 numbers[i] = numbers[i - 2] + numbers[i - 1];
-for (i = 0 ; i < 49 ; ++i)
+for (i = 2 ; i < 49 ; ++i)
 printf("%li, ", numbers[i]);
 printf("%li\n", numbers[49]);
 return (0);
