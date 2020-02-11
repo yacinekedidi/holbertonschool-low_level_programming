@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * main - Short description, single line
- * @void: Description of parameter x
+ * positive_or_negative - Short description, single line
+ * @n: Description of parameter x
 (*
 * Description: Longer description of the function)?
 (* section header: Section description)*
@@ -12,14 +12,10 @@
 */
 void positive_or_negative(int n)
 {
- 
-  /* srand(time(0));
-     n = rand() - RAND_MAX / 2; */
-  if (n > 0)
-    printf("%d is positive\n", n);
-  else if (n == 0)
-    printf("%d is zero\n", n);
-  else
-    printf("%d is negative\n", n);
- 
- }
+if (n > 0)
+printf("%d is positive\n", n);
+else if (n == 0)
+printf("%d is zero\n", n);
+else
+printf("%d is negative\n", n);
+}
