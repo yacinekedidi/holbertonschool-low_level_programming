@@ -9,7 +9,7 @@
 */
 int main(void)
 {
-unsigned long fibo = 0, f1 = 1, f2 = 2, sum = 2;  
+unsigned long fibo = 0, f1 = 1, f2 = 2, sum = 2;
 while (fibo <= 4000000)
 {
 fibo = f2 + f1;
