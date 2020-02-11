@@ -23,7 +23,10 @@ _putchar(',');
 _putchar(' ');
 }
 if (i * (j + 1) < 10)
+{
+if (j != 9)
 _putchar(' ');
+}
 }
 else
 {
