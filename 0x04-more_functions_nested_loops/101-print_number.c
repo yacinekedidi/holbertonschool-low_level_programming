@@ -15,7 +15,6 @@ if (n < 0)
 {
 _putchar('-');
 n = -n;
-x = n;
 }
 x = n;
 if (n > 0)
