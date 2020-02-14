@@ -6,17 +6,18 @@
 */
 void print_number(int n)
 {
-int y, x = n, d = 0, s = 1;
+int y, x, d = 0, s = 1;
 if (n == 0)
 _putchar(n + '0');
 else
 {
-if ( n < 0)
+if (n < 0)
 {
 _putchar('-');
 n = -n;
 x = n;
 }
+x = n;
 if (n > 0)
 {
 while (x > 0)
