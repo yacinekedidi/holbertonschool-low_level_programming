@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * _isupper - Short description, single line
- * @c: Description of parameter x
+ * print_rev - Short description, single line
+ * @s: Description of parameter x
 (*
 * Description: Longer description of the function)?
 (* section header: Section description)*
@@ -9,16 +9,11 @@
 */
 void print_rev(char *s)
 {
-
-  int i = 0, j;
-  while (s[i] != '\0')
-    i++;    
-
+int i = 0, j;
+while (s[i] != '\0')
+i++;
+i--;
 for (j = i ; j >= 0 ; j--)
 _putchar(s[j]);
 _putchar('\n');
-
-
-
-
 }
