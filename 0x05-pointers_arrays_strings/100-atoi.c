@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 #include "holberton.h"
 /**
  * power - Short description, single line
@@ -42,6 +41,8 @@ i++;
 for (a = 0 ; a < j ; a++)
 {
 y = power((j - 1) - a);
+if ( n > 2147483647 || n < -2147483647)
+break;
 n += (Snumber[a] - 48) * y;
 }
 return (n *divMinus);
