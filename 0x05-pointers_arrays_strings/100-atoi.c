@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include "holberton.h"
 /**
  * _atoi - Short description, single line
  * @s: Description of parameter a
@@ -10,7 +11,6 @@
 int _atoi(char *s)
 {
 int i = 0, j = 0, divMinus = 1, n = 0, a;
-int x;
 double y;
 char Snumber[509];
 while (s[i] != '\0')
