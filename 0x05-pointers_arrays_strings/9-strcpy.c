@@ -15,6 +15,5 @@ while (src[i] != '\0')
 dest[i] = src[i];
 i++;
 }
-dest += '\0';
 return (dest);
 }
