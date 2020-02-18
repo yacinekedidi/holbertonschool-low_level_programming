@@ -2,25 +2,28 @@
 #include <math.h>
 #include "holberton.h"
 /**
- * _atoi - Short description, single line
- * @s: Description of parameter a
+ * power - Short description, single line
+ * @x: Description of parameter a
 * Description: Longer description of the function)?
-(* section header: Section description)*
 * Return: Description of the returned value
 */
 double power(int x)
 {
-  int i, n =1;
-  for (i = 0 ; i < x ; i++)
-    n*=10;
-  return (n);
+int i, n = 1;
+for (i = 0 ; i < x ; i++)
+n *= 10;
+return (n);
 }
-
-
+/**
+ * _atoi - Short description, single line
+ * @s: Description of parameter a
+* Description: Longer description of the function)?
+* Return: Description of the returned value
+*/
 int _atoi(char *s)
 {
 int i = 0, j = 0, divMinus = 1, n = 0, a;
- double power(int);
+double power(int);
 double y;
 char Snumber[509];
 while (s[i] != '\0')
