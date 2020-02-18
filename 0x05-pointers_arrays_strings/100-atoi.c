@@ -8,9 +8,19 @@
 (* section header: Section description)*
 * Return: Description of the returned value
 */
+double power(int x)
+{
+  int i, n =1;
+  for (i = 0 ; i < x ; i++)
+    n*=10;
+  return (n);
+}
+
+
 int _atoi(char *s)
 {
 int i = 0, j = 0, divMinus = 1, n = 0, a;
+ double power(int);
 double y;
 char Snumber[509];
 while (s[i] != '\0')
@@ -28,7 +38,7 @@ i++;
 }
 for (a = 0 ; a < j ; a++)
 {
-y = pow(10, (j - 1) - a);
+y = power((j - 1) - a);
 n += (Snumber[a] - 48) * y;
 }
 return (n *divMinus);
