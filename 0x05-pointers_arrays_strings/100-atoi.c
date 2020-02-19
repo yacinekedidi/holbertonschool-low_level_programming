@@ -21,7 +21,7 @@ return (n);
 */
 int _atoi(char *s)
 {
-int i = 0, j = 0, divMinus = 1, n = 0, a, t = 1;
+unsigned int i = 0, j = 0, divMinus = 1, n = 0, a;
 double power(int);
 double y;
 char Snumber[509];
@@ -38,17 +38,13 @@ break;
 }
 i++;
 }
-t *= divMinus;
 for (a = 0 ; a < j ; a++)
 {
 y = power((j - 1) - a);
-if (t <= 2147483647 &&  t > -2147483648)
-{
+/* if (n <= 2147483647 &&  n > -2147483649) */
 n += (Snumber[a] - 48) * y;
-t = n;
-}
-else
-break;
+/*else
+  break;*/
 }
 return (n *divMinus);
 }
