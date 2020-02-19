@@ -41,10 +41,10 @@ i++;
 for (a = 0 ; a < j ; a++)
 {
 y = power((j - 1) - a);
-/*if (n <= 2147483647 && n *divMinus >= -2147483648)*/
+if (n <= 2147483647 && n *divMinus > -2147483646)
 n += (Snumber[a] - 48) * y;
-/*else
-break;*/
+else
+break;
 }
 return (n *divMinus);
 }
