@@ -1,10 +1,10 @@
 #include "holberton.h"
 #include <string.h>
 /**
- * swap_int - Short description, single line
+ * _strncpy - Short description, single line
  * @dest: Description of parameter dest
 (* @src: Description of parameter src
-* Description: Longer description of the function)?
+(* @n: Description of parameter n
 (* section header: Section description)*
 * Return: Description of the returned value
 */
@@ -15,8 +15,8 @@ char *x = dest;
 while (src[i] != '\0')
 i++;
 for (a = 0 ; a < n && src[a] != '\0' ; a++)
-dest[a] = src[a]; 
-for ( ;a < n ; a++) 
+dest[a] = src[a];
+for ( ; a < n ; a++)
 dest[a] = '\0';
 return (x);
 }

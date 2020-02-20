@@ -15,7 +15,7 @@ while (dest[i] != '\0')
 i++;
 while (src[j] != '\0')
 j++;
-if( n <= j)
+if (n <= j)
 for (a = 0 ; a < n ; a++)
 dest[a + i] = src[a];
 else
