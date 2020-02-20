@@ -9,14 +9,24 @@ char *leet(char *s)
 {
 int i = 0, j;
 char tab[] = {'a', 'e', 'o', 't', 'l'};
+char tabM[] = {'A', 'E', 'O', 'T', 'L'};
 char numbers[] = {'4', '3', '0', '7', '1'};
-s[0] = '3';
 while (s[i] != '\0')
 {
 j = 0;
 while (s[i] != tab[j] && j < 5)
 j++;
-if ((s[i] == tab[j] || s[i] == tab[j] - 32) && j <= 4)
+if (s[i] == tab[j])
+s[i] = numbers[j];
+i++;
+}
+i = 0;
+while (s[i] != '\0')
+{
+j = 0;
+while (s[i] != tabM[j] && j < 5)
+j++;
+if (s[i] == tabM[j])
 s[i] = numbers[j];
 i++;
 }
