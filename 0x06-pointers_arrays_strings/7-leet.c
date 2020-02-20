@@ -14,9 +14,9 @@ char numbers[] = {'4', '3', '0', '7', '1'};
 while (s[i] != '\0')
 {
 j = 0;
- while ((s[i] != tab[j]  || s[i] == tabM[j]) && j < 5)
+ while (s[i] != tab[j] && j < 5)
 j++;
-if (s[i] == tab[j])
+if (s[i] == tab[j] || s[i] == tabM[j])
 s[i] = numbers[j];
 i++;
 }
