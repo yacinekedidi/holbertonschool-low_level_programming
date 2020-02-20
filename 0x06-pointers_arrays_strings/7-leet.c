@@ -7,29 +7,17 @@
 */
 char *leet(char *s)
 {
-int i = 0, j;
-char tab[] = {'a', 'e', 'o', 't', 'l'};
-char tabM[] = {'A', 'E', 'O', 'T', 'L'};
-char numbers[] = {'4', '3', '0', '7', '1'};
+int i, j;
+char tab[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l' , 'L'};
+char numbers[10] = {'4','4', '3','3' ,'0','0','7', '7','1', '1'};
 while (s[i] != '\0')
 {
 j = 0;
- while (s[i] != tab[j] && j < 5)
-j++;
-if (s[i] == tab[j] || s[i] == tabM[j])
+while (s[i] != tab[j] && j < 10)
+j+=2;
+if (s[i] == tab[j] || s[i] == tab[j + 1])
 s[i] = numbers[j];
 i++;
 }
-/*
-i = 0;
-while (s[i] != '\0')
-{
-j = 0;
-while (s[i] != tabM[j] && j < 5)
-j++;
-if (s[i] == tabM[j])
-s[i] = numbers[j];
-i++;
-}*/
 return (s);
 }
