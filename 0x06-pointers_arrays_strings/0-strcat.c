@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * swap_int - Short description, single line
+ * _strcat - Short description, single line
  * @dest: Description of parameter dest
 (* @src: Description of parameter src
 * Description: Longer description of the function)?
