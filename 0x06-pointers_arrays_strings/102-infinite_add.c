@@ -9,8 +9,7 @@
 */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-char *ori = r;
-int i, j, rest = 0, x, R = 0, V, Z, p;
+int i, j, rest = 0, x, R = 0, V, Z, z = 0;
 for (i = 0 ; n1[i] != '\0' ; i++)
 ;
 for (j = 0 ; n2[j] != '\0'; j++)
@@ -22,11 +21,7 @@ else
 i--;
 j--;
 r[size_r] = '\0';
-if (i >= j)
-p = i + 1;
-else
-p = j + 1;
-for (x = p ; x >= 0 ; x--, i--, j--)
+for (x = size_r - 1 ; x >= 0 ; x--, i--, j--)
 {
 V = 0;
 Z = 0;
@@ -47,5 +42,11 @@ rest = 0;
 }
 }
 }
-return (ori);
+while (r[z] == '0')
+z++;
+for (i = 0 ; i < size_r ; i++)
+r[i] = r[z + i];
+for (; i <= size_r ; i++)
+r[i] = '\0';
+return (r);
 }
