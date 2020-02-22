@@ -10,9 +10,11 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 char *ori = r;
-int i, j, rest = 0, x, R = 0, V, Z, t = 0;
-while (i = 0 ; n1[i] != '\0' ; i++)
+int i, j, rest = 0, x, R = 0, V, Z, t = 0, p;
+for (i = 0 ; n1[i] != '\0' ; i++)
+;
 for (j = 0 ; n2[j] != '\0'; j++)
+;
 if (size_r <= i + 1 || size_r <= j + 1)
 return (0);
 else
@@ -20,7 +22,11 @@ else
 i--;
 j--;
 r[size_r] = '\0';
-for (x = size_r - 1 ; x >= 0 ; x--, i--, j--)
+if (i >= j)
+p = i + 1;
+else
+p = j + 1;
+for (x = p ; x >= 0 ; x--, i--, j--)
 {
 V = 0;
 Z = 0;
