@@ -2,7 +2,7 @@
 /**
  * infinite_add - Short description, single line
  * @n1: Description of parameter
-(* @n2: Description of parameter
+ * @n2: Description of parameter
  * @r: Description of parameter
  * @size_r: Description of parameter
 * Return: Description of the returned value
@@ -10,7 +10,7 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 char *ori = r;
-int i, j, rest = 0, x, R = 0, V, Z, t = 0, p;
+int i, j, rest = 0, x, R = 0, V, Z, p;
 for (i = 0 ; n1[i] != '\0' ; i++)
 ;
 for (j = 0 ; n2[j] != '\0'; j++)
