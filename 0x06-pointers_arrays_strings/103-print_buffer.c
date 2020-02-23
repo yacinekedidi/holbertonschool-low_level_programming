@@ -8,7 +8,7 @@
 */
 void print_buffer(char *b, int size)
 {
-int i, j, isprint(int);
+int i, j;
 for (i = 0 ; i < size ; i += 10)
 {
 printf("%08x: ", i);
@@ -18,7 +18,7 @@ if (j % 2 == 0)
 printf(" ");
 if ((i + j) >= size)
 printf("  ");
-else if (isprint(b[j + i]))
+else if (b[j + i] >= 31 && b[j + i] <= 126)
 printf("%x", b[j + i]);
 else
 printf("%02x", b[j + i]);
@@ -28,7 +28,7 @@ for (j = 0 ; j < 10 ; j++)
 {
 if ((i + j) >= size)
 break;
-if (isprint(b[j + i]))
+if (b[j + i] >= 31 && b[j + i] <= 126)
 printf("%c", b[j + i]);
 else
 printf(".");
