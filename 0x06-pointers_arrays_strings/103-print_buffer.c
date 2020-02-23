@@ -1,14 +1,14 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * infinite_add - Short description, single line
+ * print_buffer - Short description, single line
  * @b: Description of parameter
  * @size: Description of parameter
 * Return: Description of the returned value
 */
 void print_buffer(char *b, int size)
 {
-int i, j, rest, sizeMulti;
+int i, j, isprint(int);
 if (size < 0)
 printf("\n");
 else
