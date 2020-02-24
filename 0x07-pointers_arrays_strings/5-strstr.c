@@ -8,13 +8,15 @@
 char *_strstr(char *haystack, char *needle)
 {
 char *x = haystack;
+int i = 0;
 for ( ; *needle != '\0' ; needle++)
 {
-for (haystack = x ; *haystack != '\0' ; haystack++)
-if (*haystack == *needle)
-return (haystack);
-
+for (i = 0 ; *haystack != '\0' ; i++)
+if (haystack[i] == *needle)
+{
+x = &haystack[i];
+return (x);
 }
-
+}
 return (0);
 }
