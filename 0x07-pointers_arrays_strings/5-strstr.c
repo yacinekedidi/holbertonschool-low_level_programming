@@ -15,6 +15,7 @@ for (i = 0 ; *haystack != '\0' ; i++)
 if (haystack[i] == *needle)
 {
 x = &haystack[i];
+needle = &needle[0];
 return (x);
 }
 }
