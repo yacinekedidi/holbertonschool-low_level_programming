@@ -12,7 +12,7 @@ return (0);
 return (_strlen_recursion(s + 1) + 1);
 }
 /**
- * _func - Short description, single line
+ * func - Short description, single line
  * @x: Description of parameter
  * @s: Description of parameter
  * @l: Description of parameter
