@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "holberton.h"
 /**
  * main - Short description, single line
  * @argc: Description of parameter
@@ -7,6 +8,7 @@
 */
 int main(int argc, char *argv[])
 {
+if (argc == 1)
 printf("%s\n", *argv);
-return (argc);
+return (0);
 }
