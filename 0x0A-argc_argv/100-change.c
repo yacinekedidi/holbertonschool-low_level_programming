@@ -21,7 +21,7 @@ return (0);
 }
 for (i = 0 ; i < 5 ; i++)
 {
-if (y / tab[i] >= 1)
+if (y / tab[i] != 0)
 {
 x += y / tab[i];
 y = y % tab[i];
