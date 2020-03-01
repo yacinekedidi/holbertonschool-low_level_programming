@@ -26,7 +26,11 @@ if (y / tab[i] != 0)
 x = x + y / tab[i];
 y = y % tab[i];
 }
-}
+if (y == 0)
+{
 printf("%i\n", x);
+return (0);
+}
+}
 return (0);
 }
