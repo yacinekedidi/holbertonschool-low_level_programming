@@ -8,12 +8,13 @@
 */
 int main(int argc, char *argv[])
 {
-int tab[5] = {25, 10, 5, 2, 1}, y = atoi(argv[1]), i = 0, x = 0;
+int tab[5] = {25, 10, 5, 2, 1}, y, i = 0, x = 0;
 if (argc != 2)
 {
 printf("Error\n");
 return (1);
 }
+y = atoi(argv[1]);
 if (y <= 0)
 {
 printf("0\n");
@@ -21,9 +22,9 @@ return (0);
 }
 while (i < 5 || y != 0)
 {
-if (y / tab[i] != 0)
+while (y / tab[i] != 0)
 {
-x = x + y / tab[i];
+x = x + (y / tab[i]);
 y = y % tab[i];
 }
 i++;
