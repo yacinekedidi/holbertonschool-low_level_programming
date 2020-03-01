@@ -20,9 +20,9 @@ if (y <= 0)
 printf("0\n");
 return (0);
 }
-while (i < 5 || y != 0)
+while (i < 5 && y != 0)
 {
-while (y / tab[i] != 0)
+if (y / tab[i] != 0)
 {
 x = x + (y / tab[i]);
 y = y % tab[i];
