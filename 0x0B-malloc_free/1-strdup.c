@@ -40,9 +40,9 @@ return (x);
 */
 char *_strdup(char *str)
 {
-size_t l = _strlen(str);
+size_t l = _strlen(str) + 1;
 char *x = malloc(l);
-if (x == NULL)
+if (x == NULL || str == NULL)
 return (NULL);
 return (_memcpy(x, str, l));
 }
