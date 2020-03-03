@@ -12,9 +12,8 @@ int i, j, l = 0;
 for (i = 0 ; i < ac ; i++)
 {
 for (j = 0 ; av[i][j] != '\0' ; j++)
-{
 l++;
-}
+l++;
 }
 return (l);
 }
@@ -31,7 +30,7 @@ int l = lengthconcat(av, ac);
 int i = 0, j = 0, a = 0;
 if (ac == 0 || av == NULL)
 return (NULL);
-s = malloc(sizeof(char) * l);
+s = malloc(sizeof(char) * l + 1);
 if (s == NULL)
 return (NULL);
 while (i < ac)
