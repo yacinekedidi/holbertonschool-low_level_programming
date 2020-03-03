@@ -20,11 +20,12 @@ for (i = 0 ; i < height ; i++)
 p[i] = malloc(sizeof(int) * width);
 if (p[i] == NULL)
 {
-while (i <= 0)
+while (i >= 0)
 {
 free(p[i]);
 i--;
 }
+free(p);
 return (NULL);
 }
 for (j = 0 ; j < width ; j++)
