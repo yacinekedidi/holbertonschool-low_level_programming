@@ -30,6 +30,7 @@ char *_memcpy(char *dest, char *src, size_t n)
 char *x = dest;
 while (n-- > 0)
 *dest++ = *src++;
+*dest = '\0';
 return (x);
 }
 
