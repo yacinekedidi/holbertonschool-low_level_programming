@@ -27,7 +27,7 @@ return (i);
  */
 char *_memcpy(char *dest, char *src, size_t n)
 {
-int i = 0;
+size_t i = 0;
 char *x = dest;
 while (i < n)
 {
