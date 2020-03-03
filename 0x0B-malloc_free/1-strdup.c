@@ -27,9 +27,13 @@ return (i);
  */
 char *_memcpy(char *dest, char *src, size_t n)
 {
+int i = 0;
 char *x = dest;
-while (n-- > 0)
+while (i < n)
+{
 *dest++ = *src++;
+i++;
+}
 *dest = '\0';
 return (x);
 }
@@ -42,8 +46,11 @@ return (x);
 char *_strdup(char *str)
 {
 size_t l = _strlen(str) + 1;
-char *x = malloc(l);
-if (x == NULL || str == NULL)
+char *x;
+if (str == NULL)
+return (NULL);
+x =  malloc(l * sizeof(char));
+if (x == NULL)
 return (NULL);
 return (_memcpy(x, str, l));
 }
