@@ -18,26 +18,22 @@ i++;
 return (i);
 }
 /**
- * _memcpy - prints buffer in hexa
- * @dest: the address of memory to print
- * @src: fvfv
- * @n: the size of the memory to print
- *
- * Return: Nothing.
- */
-char *_memcpy(char *dest, char *src, size_t n)
+ * _strcpy - Short description, single line
+ * @dest: Description of parameter x
+(* @src: Desription
+* Description: Longer description of the function)?
+(* section header: Section description)*
+* Return: Description of the returned value
+*/
+char *_strcpy(char *dest, char *src)
 {
-size_t i = 0;
-char *x = dest;
-while (i < n)
-{
-*dest++ = *src++;
+int i = 0, j;
+while (src[i] != '\0')
 i++;
+for (j = 0 ; j <= i ; j++)
+dest[j] = src[j];
+return (dest);
 }
-*dest = '\0';
-return (x);
-}
-
 /**
  * _strdup - Short description, single line
  * @str: Description of parameter
@@ -52,5 +48,5 @@ return (NULL);
 x =  malloc(l * sizeof(char));
 if (x == NULL)
 return (NULL);
-return (_memcpy(x, str, l));
+return (_strcpy(x, str));
 }
