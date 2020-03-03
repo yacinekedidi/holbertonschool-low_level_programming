@@ -40,7 +40,7 @@ return (x);
 */
 char *_strdup(char *str)
 {
-size_t l = _strlen(str) + 1;
+size_t l = _strlen(str);
 char *x = malloc(l);
 if (x == NULL)
 return (NULL);
