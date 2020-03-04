@@ -57,7 +57,7 @@ while (str[i] != ' ')
 i++;
 }
 }
-s = malloc(sizeof(char *) * i + 1);
+s = malloc(sizeof(char *) * l + 1);
 if (s == NULL)
 return (NULL);
 i = 0;
@@ -72,11 +72,11 @@ s[a] = malloc(sizeof(char) * y + 1);
 if (s[a] == NULL)
 {
 for (j = 0 ; j <= a ; j++)
-free(s[a]);
+free(s[j]);
 free(s);
 return (NULL);
 }
-i =  display(str, *s, i);
+i =  display(str, s[a], i);
 a++;
 }
 }
