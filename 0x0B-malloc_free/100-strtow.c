@@ -88,7 +88,7 @@ free(s[j]);
 free(s);
 return (NULL);
 }
-i =  display(str, s[a], i);
+i = display(str, s[a], i);
 a++;
 }
 }
