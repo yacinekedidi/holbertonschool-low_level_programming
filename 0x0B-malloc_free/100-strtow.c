@@ -1,6 +1,27 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
+ * words - description
+ *@str: description
+ *Return: description
+ */
+int words(char *str)
+{
+int i = 0, l = 0;
+while (str[i] != '\0')
+{
+if (str[i] == ' ')
+i++;
+else
+{
+l++;
+while (str[i] != ' ')
+i++;
+}
+}
+return (l);
+}
+/**
  * display - description
  *@str: description
  *@s: description
@@ -42,25 +63,16 @@ return (a);
  */
 char **strtow(char *str)
 {
-int a = 0, l = 0, i = 0, j, y;
+int a = 0, l, i = 0, j, y;
 char **s;
 if (str == NULL || *str == '\0')
 return (NULL);
-while (str[i] != '\0')
-{
-if (str[i] == ' ')
-i++;
-else
-{
-l++;
-while (str[i] != ' ')
-i++;
-}
-}
+l = words(str);
+if (l == 0)
+return (NULL);
 s = malloc(sizeof(char *) * l + 1);
 if (s == NULL)
 return (NULL);
-i = 0;
 while (str[i] != '\0')
 {
 if (str[i] == ' ')
