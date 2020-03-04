@@ -64,7 +64,7 @@ return (a);
 char **strtow(char *str)
 {
 int a = 0, l, i = 0, j, y;
-char **s;
+char **s = NULL;
 if (str == NULL || *str == '\0')
 return (NULL);
 l = words(str);
