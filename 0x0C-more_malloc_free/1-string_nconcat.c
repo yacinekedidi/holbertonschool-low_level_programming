@@ -24,7 +24,7 @@ j++;
 if (j < n)
 n = j;
 x = malloc(sizeof(char) * i + n + 1);
-if ( x == NULL)
+if (x == NULL)
 return (NULL);
 i = 0;
 while (s1[i])
