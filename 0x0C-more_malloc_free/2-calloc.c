@@ -13,10 +13,16 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 void *x;
+unsigned int i = 0;
 if (nmemb == 0 || size == 0)
 return (NULL);
 x = malloc(nmemb * size);
 if (x == NULL)
 return (NULL);
+while (i < nmemb * size)
+{
+x[i] = 0;
+i++;
+}
 return (x);
 }
