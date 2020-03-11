@@ -2,6 +2,7 @@
 #include "3-calc.h"
 #include <stdlib.h>
 #include <string.h>
+
 /**
  * main - check if a number is equal to 98
  * @argc: the integer to check
@@ -12,6 +13,11 @@ int main(int argc, char **argv)
 {
 	int (*p)(int, int), a = atoi(argv[1]), b = atoi(argv[3]);
 
+if (strlen(argv[2] != 1))
+{
+printf("Error\n");
+exit(99);
+}
 	if (argc != 4)
 	{
 	printf("Error\n");
