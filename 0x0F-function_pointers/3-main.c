@@ -20,7 +20,6 @@ int main(int argc, char **argv)
 	if (argc != 4)
 	{
 	printf("Error\n");
-	printf("%i\n", argc);
 	exit(98);
 
 	}
