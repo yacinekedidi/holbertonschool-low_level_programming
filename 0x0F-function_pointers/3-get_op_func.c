@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "3-calc.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * get_op_func - check if a number is equal to 98
  * @s: the integer to check
@@ -22,7 +23,7 @@ int i = 0;
 
 while (ops[i].op != NULL)
 {
-if ((*s == *(ops[i].op)) && s[1] == '\0')
+if ((*s == *(ops[i].op)) && strlen(s) == 1)
 return (ops[i].f);
 i++;
 }
