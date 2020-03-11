@@ -19,6 +19,11 @@ int main(int argc, char **argv)
 	exit(98);
 	}
 	p = get_op_func(argv[2]);
+	if (p == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	if (b == 0 && (*argv[2] == '/' || *argv[2] == '%'))
 	{
 		printf("Error\n");
