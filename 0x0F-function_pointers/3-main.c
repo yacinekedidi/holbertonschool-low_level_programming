@@ -21,7 +21,6 @@ int main(int argc, char **argv)
 	{
 	printf("Error\n");
 	exit(98);
-
 	}
 	p = get_op_func(argv[2]);
 	printf("%d\n", p(a, b));
