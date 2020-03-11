@@ -13,7 +13,7 @@ void myfunc(char *s, int b)
 
 	for (i = 0 ; i < b ; i++)
 	{
-		printf("%02x", (unsigned char) s[i]);
+		printf("%02x", s[i] & 0xff);
 		if (i != b - 1)
 			printf(" ");
 	}
@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-	if (argv[1] < 0)
+	if (atoi(argv[1]) < 0)
 	{
 		printf("Error\n");
 		return (2);
