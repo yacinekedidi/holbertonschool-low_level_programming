@@ -3,13 +3,18 @@
 #include <stdarg.h>
 
 /**
- * charPrint - prints parameter
+ * stringPrint - prints parameter
  * @args : list of arguments
  * Return: Always.
  */
-void charPrint(va_list args)
+void stringPrint(va_list args)
 {
-	printf("%c", va_arg(args, int));
+	char *str;
+
+	str = va_arg(args, char *);
+	if (str == NULL)
+		str = "(nil)";
+	printf("%s", str);
 }
 
 /**
@@ -33,18 +38,13 @@ void floatPrint(va_list args)
 }
 
 /**
- * stringPrint - prints parameter
+ * charPrint - prints parameter
  * @args : list of arguments
  * Return: Always.
  */
-void stringPrint(va_list args)
+void charPrint(va_list args)
 {
-	char *str;
-
-	str = va_arg(args, char *);
-	if (str == NULL)
-		str = "(nil)";
-	printf("%s", str);
+	printf("%c", va_arg(args, int));
 }
 
 /**
@@ -55,27 +55,27 @@ void stringPrint(va_list args)
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, j;
+	int i, j;
 	va_list args;
 	char *separator = "";
 	f_t form[] = {
-		{"c", charPrint},
-		{"f", floatPrint},
-		{"i", intPrint},
 		{"s", stringPrint},
-		{NULL, NULL}
+		{"i", intPrint},
+		{"f", floatPrint},
+		{"c", charPrint}
 	};
 
 	va_start(args, format);
-	while (format[i] != '\0' && format != NULL)
+	i = 0;
+	while (format[i] && format)
 	{
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == *(form[j]).fo)
+			if (format[i] == *(form[j].fo))
 			{
 				printf("%s", separator);
-				form[i].x(args);
+				form[j].x(args);
 				separator = ", ";
 				break;
 			}
@@ -83,7 +83,6 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-
 	printf("\n");
 	va_end(args);
 }
