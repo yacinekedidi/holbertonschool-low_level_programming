@@ -5,50 +5,46 @@
 /**
  * charPrint - prints parameter
  * @args : list of arguments
- * @s : my separator
  * Return: Always.
  */
-void charPrint(va_list args, char *s)
+void charPrint(va_list args)
 {
-	printf("%c%s", va_arg(args, int), s);
+	printf("%c", va_arg(args, int));
 }
 
 /**
  * intPrint - prints parameter
  * @args : list of arguments
- * @s : my separator
  * Return: Always.
  */
-void intPrint(va_list args, char *s)
+void intPrint(va_list args)
 {
-	printf("%d%s", va_arg(args, int), s);
+	printf("%d", va_arg(args, int));
 }
 
 /**
  * floatPrint - prints parameter
  * @args : list of arguments
- * @s : my separator
  * Return: Always.
  */
-void floatPrint(va_list args, char *s)
+void floatPrint(va_list args)
 {
-	printf("%f%s", va_arg(args, double), s);
+	printf("%f", va_arg(args, double));
 }
 
 /**
  * stringPrint - prints parameter
  * @args : list of arguments
- * @s : my separator
  * Return: Always.
  */
-void stringPrint(va_list args, char *s)
+void stringPrint(va_list args)
 {
 	char *str;
 
 	str = va_arg(args, char *);
 	if (str == NULL)
 		str = "(nil)";
-	printf("%s%s", str, s);
+	printf("%s", str);
 }
 
 /**
@@ -61,7 +57,7 @@ void print_all(const char * const format, ...)
 {
 	int i = 0, j;
 	va_list args;
-	char *separator = ", ";
+	char *separator = "";
 	f_t form[] = {
 		{"c", charPrint},
 		{"f", floatPrint},
@@ -77,10 +73,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *(form[j]).fo)
 			{
-				if (format[i + 1] == '\0')
-					separator = "";
-				form[i].x(args, separator);
-					break;
+				printf("%s", separator);
+				form[i].x(args);
+				separator = ", ";
 			}
 			j++;
 		}
