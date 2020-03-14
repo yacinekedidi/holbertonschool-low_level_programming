@@ -10,7 +10,7 @@
 typedef struct f
 {
 char *fo;
-void (*x)();
+void (*x)(va_list);
 } f_t;
 
 int sum_them_all(const unsigned int n, ...);
