@@ -62,11 +62,10 @@ void print_all(const char * const format, ...)
 	va_list args;
 	char *separator = "";
 	f_t form[] = {
-		{"s", stringPrint},
-		{"i", intPrint},
-		{"f", floatPrint},
-		{"c", charPrint},
-		{NULL, NULL}
+		{'s', stringPrint},
+		{'i', intPrint},
+		{'f', floatPrint},
+		{'c', charPrint}
 	};
 
 	va_start(args, format);
@@ -74,9 +73,9 @@ void print_all(const char * const format, ...)
 	while (format[i] != '\0' && format != NULL)
 	{
 		j = 0;
-		while (form[j].fo)
+		while (j < 4)
 		{
-			if (format[i] == *(form[j].fo))
+			if (format[i] == form[j].fo)
 			{
 				printf("%s", separator);
 				form[j].x(args);
