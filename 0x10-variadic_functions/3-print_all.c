@@ -19,7 +19,7 @@ void charPrint(va_list args)
  */
 void intPrint(va_list args)
 {
-	printf("%d", va_arg(args, int));
+	printf("%i", va_arg(args, int));
 }
 
 /**
@@ -62,7 +62,8 @@ void print_all(const char * const format, ...)
 		{"c", charPrint},
 		{"f", floatPrint},
 		{"i", intPrint},
-		{"s", stringPrint}
+		{"s", stringPrint},
+		{NULL, NULL}
 	};
 
 	va_start(args, format);
