@@ -65,15 +65,16 @@ void print_all(const char * const format, ...)
 		{"s", stringPrint},
 		{"i", intPrint},
 		{"f", floatPrint},
-		{"c", charPrint}
+		{"c", charPrint},
+		{NULL, NULL}
 	};
 
 	va_start(args, format);
 	i = 0;
-	while (format[i] && format)
+	while (format[i] != '\0' && format != NULL)
 	{
 		j = 0;
-		while (j < 4)
+		while (form[j].fo)
 		{
 			if (format[i] == *(form[j].fo))
 			{
