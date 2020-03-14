@@ -27,7 +27,7 @@ void stringPrint(va_list args)
  */
 void intPrint(va_list args)
 {
-	printf("%i", va_arg(args, int));
+	printf("%d", va_arg(args, int));
 }
 
 /**
@@ -86,6 +86,6 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-	printf("\n");
 	va_end(args);
+	printf("\n");
 }
