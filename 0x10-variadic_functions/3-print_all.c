@@ -77,6 +77,7 @@ void print_all(const char * const format, ...)
 				printf("%s", separator);
 				form[i].x(args);
 				separator = ", ";
+				break;
 			}
 			j++;
 		}
