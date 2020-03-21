@@ -4,38 +4,31 @@
 * @n: Description of parameter size
 * Return: Description of the returned value
 */
+
 void print_number(int n)
 {
-int y, x, d = 0, s = 1;
-if (n == 0)
-_putchar(n + '0');
-else
-{
-if (n < 0)
-{
-_putchar('-');
-n = -n;
-}
-x = n;
-if (n > 0)
-{
-while (x > 0)
-{
-x /= 10;
-d++;
-if (d > 1)
-s *= 10;
-}
-while (d != 1)
-{
-y = n / s;
-_putchar(y + '0');
-d--;
-n = n % s;
-s /= 10;
-}
-_putchar(n % 10 + '0');
-_putchar('\n');
-}
-}
+	int i = 0, j, div = 1, tmp;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+	tmp = n;
+	while (tmp / 10 > 0)
+	{
+		tmp /= 10;
+		i++;
+	}
+
+	for (j = 0 ; j < i ; j++)
+	div *= 10;
+
+	while (div > 0)
+	{
+	_putchar(n / div + '0');
+	n %= div;
+	div /= 10;
+	}
+	_putchar('\n');
 }
