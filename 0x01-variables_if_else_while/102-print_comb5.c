@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 /**
  * main - Short description, single line
  * @void: Description of parameter x
@@ -9,26 +10,28 @@
 */
 int main(void)
 {
-int i, x, y, j;
-for (i = 48 ; i < 58 ; i++)
+int i, j;
+
+for (i = 0 ; i < 100 ; i++)
 {
-for (j = 48 ; j < 58 ; j++)
-{
-for (x = 48 ; x < 58 ; x++)
-{
-for (y = 48 ; y < 58 ; y++)
-{
-putchar(i);
-putchar(j);
-putchar(' ');
-putchar(x);
-putchar(y);
-putchar(',');
-putchar(' ');
+	for (j = 0 ; j < 100 ; j++)
+	{
+		if (j > i)
+		{
+		putchar((i / 10) + '0');
+		putchar((i % 10) + '0');
+		putchar(' ');
+		putchar((j / 10) + '0');
+		putchar((j % 10) + '0');
+		if (i + j != 197)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		}
+	}
 }
-}
-}
-}
+
 putchar('\n');
 return (0);
 }
