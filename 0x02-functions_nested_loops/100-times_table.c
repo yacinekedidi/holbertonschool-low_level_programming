@@ -1,5 +1,27 @@
 #include "holberton.h"
 
+/**
+ * onedigit - Short description, single line
+ * @i: Description of parameter x
+ * @j: Description of parameter x
+ * @n: Description of parameter x
+* Return: Description of the returned value
+*/
+void onedigit(int i, int j, int n)
+{
+	_putchar(i * j + '0');
+	if (j != n)
+	{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	}
+	if (i * (j + 1) < 10)
+	{
+	if (j != n)
+	_putchar(' ');
+	}
+}
 
 /**
  * twodigit - Short description, single line
@@ -64,18 +86,7 @@ int i, j;
 	{
 	if (i * j <= 9)
 	{
-	_putchar(i * j + '0');
-	if (j != n)
-	{
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-	}
-	if (i * (j + 1) < 10)
-	{
-	if (j != n)
-	_putchar(' ');
-	}
+		onedigit(i, j, n);
 	}
 	else if (i * j < 100)
 	{
