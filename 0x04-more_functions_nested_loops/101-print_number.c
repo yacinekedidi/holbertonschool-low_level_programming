@@ -7,7 +7,7 @@
 
 void print_number(int n)
 {
-	int i = 0, j, div = 1, tmp;
+	int i = 0, j, div = 1, tmp, tmpn = n;
 
 	if (n < 0)
 	{
@@ -28,6 +28,8 @@ void print_number(int n)
 
 	while (div > 0)
 	{
+		if (tmpn == -2147483648 && n < 10)
+			n += 1;
 	_putchar(n / div + '0');
 	n %= div;
 	div /= 10;
