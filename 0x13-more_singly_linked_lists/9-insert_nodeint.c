@@ -29,7 +29,7 @@ unsigned int i;
 
 	if (idx > i)
 	{
-	free(new);	
+	free(new);
 	return (NULL);
 	}
 
@@ -39,7 +39,7 @@ unsigned int i;
 	*head = new;
 	return (*head);
 	}
-	
+
 	h = *head;
 	for (i = 0 ; i != (idx - 1) ; i++)
 	h = h->next;
