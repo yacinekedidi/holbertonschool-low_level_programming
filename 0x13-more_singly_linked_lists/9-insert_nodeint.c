@@ -18,16 +18,20 @@ unsigned int i;
 	if (!head)
 	return (NULL);
 
+	new = malloc(sizeof(listint_t));
+	if (!new)
+	return (NULL);
+	new->n = n;
+
 	h = *head;
 	for (i = 0 ; h ; i++)
 	h = h->next;
 
 	if (idx > i)
+	{
+	free(new);	
 	return (NULL);
-
-	new = malloc(sizeof(listint_t));
-	if (!new)
-	return (NULL);
+	}
 
 	if (idx == 0)
 	{
@@ -35,11 +39,11 @@ unsigned int i;
 	*head = new;
 	return (*head);
 	}
+	
 	h = *head;
 	for (i = 0 ; i != (idx - 1) ; i++)
 	h = h->next;
 
-	new->n = n;
 	new->next = h->next;
 	h->next = new;
 
