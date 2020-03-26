@@ -13,6 +13,9 @@ const char *r = b;
 unsigned int res = 0;
 int i = 0, j = 0, x;
 
+if (!b)
+return (0);
+
 while (r[i])
 {
 if (r[i] != '0' && r[i] != '1')
