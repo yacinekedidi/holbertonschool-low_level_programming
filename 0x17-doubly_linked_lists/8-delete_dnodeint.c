@@ -13,7 +13,7 @@ dlistint_t *del = *head;
 unsigned int i = 0;
 
 if (!*head)
-return (-1);
+return (1);
 
 for (; i != index ; i++)
 {
@@ -22,12 +22,8 @@ return (-1);
 del = del->next;
 }
 
- if (i == 0)
-{
+if (i == 0)
 *head = del->next;
-if (!*head)
-*head = NULL;
-}
 else
 {
 del->prev->next = del->next;
