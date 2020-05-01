@@ -13,7 +13,7 @@ dlistint_t *del = *head;
 unsigned int i = 0;
 
 if (!*head)
-return (1);
+return (-1);
 
 for (; i != index ; i++)
 {
