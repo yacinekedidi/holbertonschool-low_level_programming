@@ -25,7 +25,7 @@ del = del->next;
 if (i == 0)
 {
 *head = del->next;
-if (*head) 
+if (*head)
 (*head)->prev = NULL;
 }
 else
