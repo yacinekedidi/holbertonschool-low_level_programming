@@ -15,10 +15,10 @@ return (NULL);
 
 new->n = n;
 new->prev = NULL;
-new->next = NULL;
+new->next = *head;
 
 if (*head)
-new->next = *head;
+(*head)->prev = new;;
 
 return (*head = new);
 }
