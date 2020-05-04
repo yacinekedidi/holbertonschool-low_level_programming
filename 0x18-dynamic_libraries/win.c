@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int rand()
+int win()
 {
 
   printf("hello\n");
