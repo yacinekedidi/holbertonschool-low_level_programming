@@ -3,7 +3,7 @@
 
 /**
  * hash_table_set - check the code for Holberton School students.
- * @ht = hashtable
+ * @ht : hashtable
  * @key: key
  * @value: value
  * Return: Always EXIT_SUCCESS.
