@@ -16,18 +16,17 @@ return;
 
 for (; i < ht->size ; i++)
 {
-	if (ht->array[i])
-	{
 		h = ht->array[i];
 		while (h)
 		{
-			tmp = h->next;
-			free(h->key);
-			free(h->value);
-			free(h);
-			h = tmp;
+			tmp = h;
+			h = h->next;
+			free(tmp->key);
+			free(tmp->value);
+			free(tmp);
 		}
-	}
 }
+free(ht->array);
+free(ht);
 return;
 }
