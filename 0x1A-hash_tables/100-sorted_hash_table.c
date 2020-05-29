@@ -50,14 +50,14 @@ char *val;
 		return (0);
 	val = strdup(value);
 	i = key_index((const unsigned char *)key, ht->size);
-	h = ht->array[i];
+	h = ht->shead;
 	while (h)
 	{
 		if (strcmp(h->key, key) == 0)
 		{
 			free(h->value), h->value = val;
 			return (1);
-		} h = h->next;
+		} h = h->snext;
 	} new = malloc(sizeof(shash_node_t));
 	if (!new)
 		return (0);
