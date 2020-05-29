@@ -94,11 +94,13 @@ char *val;
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	shash_node_t *h = NULL;
+	unsigned long int i;
 
 	if (!ht || !key)
 		return (NULL);
-	/*i = key_index((const unsigned char *)key, ht->size);*/
-
+	i = key_index((const unsigned char *)key, ht->size);
+	if (i >= ht->size)
+		return (NULL);
 
 	h = ht->shead;
 	while (h)
