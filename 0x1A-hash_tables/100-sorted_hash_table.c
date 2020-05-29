@@ -119,6 +119,9 @@ void shash_table_print(const shash_table_t *ht)
 {
 	shash_node_t *h = NULL;
 
+	if (!ht)
+		return;
+
 	h = ht->shead;
 	printf("{");
 	while (h)
