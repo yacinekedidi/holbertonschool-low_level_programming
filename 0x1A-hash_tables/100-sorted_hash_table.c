@@ -171,6 +171,7 @@ printf("}\n");
 void shash_table_delete(shash_table_t *ht)
 {
 shash_node_t *tmp = NULL, *h = NULL;
+shash_table_t *t = ht;
 
 if (!ht)
 return;
@@ -187,7 +188,7 @@ for (; h ;)
 	free(tmp->value);
 	free(tmp);
 }
-free(ht->array);
-free(ht);
+free(t->array);
+free(t);
 return;
 }
