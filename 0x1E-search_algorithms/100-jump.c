@@ -43,12 +43,12 @@ while (high < (int)size)
 
 	}
 
-	if (array[low] == value)
-		return (low);
-
 }
 printf("Value checked array[%d] = [%d]\n", low, array[low]);
 printf("Value found between indexes [%d] and [%d]\n", low, high);
+
+if (array[low] == value)
+	return (low);
 
 return (-1);
 }
