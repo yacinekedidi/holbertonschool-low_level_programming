@@ -43,7 +43,8 @@ while (high < (int)size)
 
 	}
 
-	
+	if (array[low] == value)
+		return (low);
 
 }
 printf("Value checked array[%d] = [%d]\n", low, array[low]);
