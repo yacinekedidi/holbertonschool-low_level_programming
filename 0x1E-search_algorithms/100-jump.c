@@ -23,10 +23,10 @@ high = sqrt(size);
 
 while (high < (int)size)
 {
-	printf("Value checked array[%d] = [%d]\n", low, array[low]);
 
 	if (array[low] < value)
 	{
+		printf("Value checked array[%d] = [%d]\n", low, array[low]);
 		if (array[high] >= value)
 		{
 			printf("Value found between indexes [%d] and [%d]\n", low, high);
